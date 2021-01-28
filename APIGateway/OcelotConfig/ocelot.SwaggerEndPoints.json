@@ -1,0 +1,40 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "catalogo",
+      "Config": [
+        {
+          "Name": "catalogo API",
+          "Version": "v1",
+          "Url": "http://catalogo:80/swagger/v1/swagger.json",
+          "Service": {
+            "Name": "catalogo",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        },
+        {
+          "Name": "catalogo API",
+          "Version": "v2",
+          "Service": {
+            "Name": "catalogo",
+            "Path": "/swagger/v2/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "produto",
+      "Config": [
+        {
+          "Name": "produto API",
+          "Version": "v1",
+          "Url": "http://produto:80/swagger/v1/swagger.json",
+          "Service": {
+            "Name": "produto",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    }
+  ]
+}

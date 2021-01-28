@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using MMLib.SwaggerForOcelot.DependencyInjection;
 
 namespace APIGateway
 {
@@ -19,7 +20,11 @@ namespace APIGateway
                 })
             .ConfigureAppConfiguration((hostingContext, config) =>
             {
-                config.AddJsonFile($"ocelot.json");
+                config
+                .AddOcelotWithSwaggerSupport((o) =>
+                {
+                    o.Folder = "OcelotConfig";
+                });
 
                 // for local test use below one, multi env json file not worked
                 //config.AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true);

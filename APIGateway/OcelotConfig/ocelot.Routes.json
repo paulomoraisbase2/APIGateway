@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalogo",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/catalogo/{everything}",
+      "SwaggerKey": "catalogo"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "pedido",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/pedido/{everything}",
+      "SwaggerKey": "produto"
+    }
+  ]
+}

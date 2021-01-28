@@ -3,23 +3,40 @@ version: '3.4'
 services:
   rabbitmq:
      image: rabbitmq:3-management-alpine
+     container_name: rabbitmq
+     restart: always
+     ports:
+            - "5672:5672"
+            - "15672:15672" 
 
   apigateway:
     image: ${DOCKER_REGISTRY-}apigateway
+    environment:
+            - ASPNETCORE_ENVIRONMENT=Development
     build:
       context: .
       dockerfile: APIGateway/Dockerfile
-
+    depends_on:
+        - pedido
+        - catalogo
+    ports:
+        - "7000:80"
   pedido:
     image: ${DOCKER_REGISTRY-}pedido
+    environment:
+            - ASPNETCORE_ENVIRONMENT=Development
     build:
       context: .
       dockerfile: Pedido.API/Dockerfile
-
+    ports:
+        - "8000:80"
   catalogo:
     image: ${DOCKER_REGISTRY-}catalogo
+    environment:
+            - ASPNETCORE_ENVIRONMENT=Development
     build:
       context: .
       dockerfile: Catalogo.API/Dockerfile
-
+    ports:
+        - "8001:80"
       
