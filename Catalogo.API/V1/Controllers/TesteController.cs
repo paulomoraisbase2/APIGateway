@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Catalogo.API.V1.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace Catalogo.API.Controllers
+namespace Catalogo.API.V1.Controllers
 {
     [ApiController]
+    [ApiVersion("1.0")]
+    [ApiVersion("0.9", Deprecated = true)]
     [Route("api/[controller]")]
     public class TesteController : ControllerBase
     {

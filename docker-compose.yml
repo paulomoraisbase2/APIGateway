@@ -40,3 +40,5 @@ services:
     ports:
         - "8001:80"
       
+  pedidodb:
+    image: mcr.microsoft.com/mssql/server

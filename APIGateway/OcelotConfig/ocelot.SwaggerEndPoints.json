@@ -14,10 +14,11 @@
         },
         {
           "Name": "catalogo API",
-          "Version": "v2",
+          "Url": "http://catalogo:80/swagger/v0.9/swagger.json",
+          "Version": "v0.9",
           "Service": {
             "Name": "catalogo",
-            "Path": "/swagger/v2/swagger.json"
+            "Path": "/swagger/v0.9/swagger.json"
           }
         }
       ]

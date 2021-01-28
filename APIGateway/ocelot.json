@@ -1,1 +1,257 @@
-{"Routes":[{"SwaggerKey":"catalogo","DownstreamPathTemplate":"/api/{everything}","UpstreamPathTemplate":"/catalogo/{everything}","UpstreamHttpMethod":[],"DownstreamHttpMethod":null,"AddHeadersToRequest":{},"UpstreamHeaderTransform":{},"DownstreamHeaderTransform":{},"AddClaimsToRequest":{},"RouteClaimsRequirement":{},"AddQueriesToRequest":{},"ChangeDownstreamPathTemplate":{},"RequestIdKey":null,"FileCacheOptions":{"TtlSeconds":0,"Region":null},"RouteIsCaseSensitive":false,"ServiceName":null,"ServiceNamespace":null,"DownstreamScheme":"http","QoSOptions":{"ExceptionsAllowedBeforeBreaking":0,"DurationOfBreak":0,"TimeoutValue":0},"LoadBalancerOptions":{"Type":null,"Key":null,"Expiry":0},"RateLimitOptions":{"ClientWhitelist":[],"EnableRateLimiting":false,"Period":null,"PeriodTimespan":0.0,"Limit":0},"AuthenticationOptions":{"AuthenticationProviderKey":null,"AllowedScopes":[]},"HttpHandlerOptions":{"AllowAutoRedirect":false,"UseCookieContainer":false,"UseTracing":false,"UseProxy":true,"MaxConnectionsPerServer":2147483647},"DownstreamHostAndPorts":[{"Host":"catalogo","Port":80}],"UpstreamHost":null,"Key":null,"DelegatingHandlers":[],"Priority":1,"Timeout":0,"DangerousAcceptAnyServerCertificateValidator":false,"SecurityOptions":{"IPAllowedList":[],"IPBlockedList":[]},"DownstreamHttpVersion":null},{"SwaggerKey":"produto","DownstreamPathTemplate":"/api/{everything}","UpstreamPathTemplate":"/pedido/{everything}","UpstreamHttpMethod":[],"DownstreamHttpMethod":null,"AddHeadersToRequest":{},"UpstreamHeaderTransform":{},"DownstreamHeaderTransform":{},"AddClaimsToRequest":{},"RouteClaimsRequirement":{},"AddQueriesToRequest":{},"ChangeDownstreamPathTemplate":{},"RequestIdKey":null,"FileCacheOptions":{"TtlSeconds":0,"Region":null},"RouteIsCaseSensitive":false,"ServiceName":null,"ServiceNamespace":null,"DownstreamScheme":"http","QoSOptions":{"ExceptionsAllowedBeforeBreaking":0,"DurationOfBreak":0,"TimeoutValue":0},"LoadBalancerOptions":{"Type":null,"Key":null,"Expiry":0},"RateLimitOptions":{"ClientWhitelist":[],"EnableRateLimiting":false,"Period":null,"PeriodTimespan":0.0,"Limit":0},"AuthenticationOptions":{"AuthenticationProviderKey":null,"AllowedScopes":[]},"HttpHandlerOptions":{"AllowAutoRedirect":false,"UseCookieContainer":false,"UseTracing":false,"UseProxy":true,"MaxConnectionsPerServer":2147483647},"DownstreamHostAndPorts":[{"Host":"pedido","Port":80}],"UpstreamHost":null,"Key":null,"DelegatingHandlers":[],"Priority":1,"Timeout":0,"DangerousAcceptAnyServerCertificateValidator":false,"SecurityOptions":{"IPAllowedList":[],"IPBlockedList":[]},"DownstreamHttpVersion":null}],"DynamicRoutes":[],"Aggregates":[],"GlobalConfiguration":{"RequestIdKey":null,"ServiceDiscoveryProvider":{"Scheme":null,"Host":null,"Port":0,"Type":null,"Token":null,"ConfigurationKey":null,"PollingInterval":0,"Namespace":null},"RateLimitOptions":{"ClientIdHeader":"ClientId","QuotaExceededMessage":null,"RateLimitCounterPrefix":"ocelot","DisableRateLimitHeaders":false,"HttpStatusCode":429},"QoSOptions":{"ExceptionsAllowedBeforeBreaking":0,"DurationOfBreak":0,"TimeoutValue":0},"BaseUrl":null,"LoadBalancerOptions":{"Type":null,"Key":null,"Expiry":0},"DownstreamScheme":null,"HttpHandlerOptions":{"AllowAutoRedirect":false,"UseCookieContainer":false,"UseTracing":false,"UseProxy":true,"MaxConnectionsPerServer":2147483647},"DownstreamHttpVersion":null},"SwaggerEndPoints":[{"Key":"catalogo","VersionPlaceholder":"{version}","KeyToPath":"catalogo","Config":[{"Name":"catalogo API","Version":"v1","Url":"http://catalogo:80/swagger/v1/swagger.json","Service":{"Name":"catalogo","Path":"/swagger/v1/swagger.json"}},{"Name":"catalogo API","Version":"v2","Url":null,"Service":{"Name":"catalogo","Path":"/swagger/v2/swagger.json"}}],"HostOverride":null,"TransformByOcelotConfig":true},{"Key":"produto","VersionPlaceholder":"{version}","KeyToPath":"produto","Config":[{"Name":"produto API","Version":"v1","Url":"http://produto:80/swagger/v1/swagger.json","Service":{"Name":"produto","Path":"/swagger/v1/swagger.json"}}],"HostOverride":null,"TransformByOcelotConfig":true}]}
+{
+  "Routes": [
+    {
+      "SwaggerKey": "catalogo",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "UpstreamPathTemplate": "/catalogo/{everything}",
+      "UpstreamHttpMethod": [
+      ],
+      "DownstreamHttpMethod": null,
+      "AddHeadersToRequest": {
+      },
+      "UpstreamHeaderTransform": {
+      },
+      "DownstreamHeaderTransform": {
+      },
+      "AddClaimsToRequest": {
+      },
+      "RouteClaimsRequirement": {
+      },
+      "AddQueriesToRequest": {
+      },
+      "ChangeDownstreamPathTemplate": {
+      },
+      "RequestIdKey": null,
+      "FileCacheOptions": {
+        "TtlSeconds": 0,
+        "Region": null
+      },
+      "RouteIsCaseSensitive": false,
+      "ServiceName": null,
+      "ServiceNamespace": null,
+      "DownstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 0,
+        "DurationOfBreak": 0,
+        "TimeoutValue": 0
+      },
+      "LoadBalancerOptions": {
+        "Type": null,
+        "Key": null,
+        "Expiry": 0
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [
+        ],
+        "EnableRateLimiting": false,
+        "Period": null,
+        "PeriodTimespan": 0.0,
+        "Limit": 0
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": null,
+        "AllowedScopes": [
+        ]
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": false,
+        "UseTracing": false,
+        "UseProxy": true,
+        "MaxConnectionsPerServer": 2147483647
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalogo",
+          "Port": 80
+        }
+      ],
+      "UpstreamHost": null,
+      "Key": null,
+      "DelegatingHandlers": [
+      ],
+      "Priority": 1,
+      "Timeout": 0,
+      "DangerousAcceptAnyServerCertificateValidator": false,
+      "SecurityOptions": {
+        "IPAllowedList": [
+        ],
+        "IPBlockedList": [
+        ]
+      },
+      "DownstreamHttpVersion": null
+    },
+    {
+      "SwaggerKey": "produto",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "UpstreamPathTemplate": "/pedido/{everything}",
+      "UpstreamHttpMethod": [
+      ],
+      "DownstreamHttpMethod": null,
+      "AddHeadersToRequest": {
+      },
+      "UpstreamHeaderTransform": {
+      },
+      "DownstreamHeaderTransform": {
+      },
+      "AddClaimsToRequest": {
+      },
+      "RouteClaimsRequirement": {
+      },
+      "AddQueriesToRequest": {
+      },
+      "ChangeDownstreamPathTemplate": {
+      },
+      "RequestIdKey": null,
+      "FileCacheOptions": {
+        "TtlSeconds": 0,
+        "Region": null
+      },
+      "RouteIsCaseSensitive": false,
+      "ServiceName": null,
+      "ServiceNamespace": null,
+      "DownstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 0,
+        "DurationOfBreak": 0,
+        "TimeoutValue": 0
+      },
+      "LoadBalancerOptions": {
+        "Type": null,
+        "Key": null,
+        "Expiry": 0
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [
+        ],
+        "EnableRateLimiting": false,
+        "Period": null,
+        "PeriodTimespan": 0.0,
+        "Limit": 0
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": null,
+        "AllowedScopes": [
+        ]
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": false,
+        "UseTracing": false,
+        "UseProxy": true,
+        "MaxConnectionsPerServer": 2147483647
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "pedido",
+          "Port": 80
+        }
+      ],
+      "UpstreamHost": null,
+      "Key": null,
+      "DelegatingHandlers": [
+      ],
+      "Priority": 1,
+      "Timeout": 0,
+      "DangerousAcceptAnyServerCertificateValidator": false,
+      "SecurityOptions": {
+        "IPAllowedList": [
+        ],
+        "IPBlockedList": [
+        ]
+      },
+      "DownstreamHttpVersion": null
+    }
+  ],
+  "DynamicRoutes": [
+  ],
+  "Aggregates": [
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": null,
+    "ServiceDiscoveryProvider": {
+      "Scheme": null,
+      "Host": null,
+      "Port": 0,
+      "Type": null,
+      "Token": null,
+      "ConfigurationKey": null,
+      "PollingInterval": 0,
+      "Namespace": null
+    },
+    "RateLimitOptions": {
+      "ClientIdHeader": "ClientId",
+      "QuotaExceededMessage": null,
+      "RateLimitCounterPrefix": "ocelot",
+      "DisableRateLimitHeaders": false,
+      "HttpStatusCode": 429
+    },
+    "QoSOptions": {
+      "ExceptionsAllowedBeforeBreaking": 0,
+      "DurationOfBreak": 0,
+      "TimeoutValue": 0
+    },
+    "BaseUrl": null,
+    "LoadBalancerOptions": {
+      "Type": null,
+      "Key": null,
+      "Expiry": 0
+    },
+    "DownstreamScheme": null,
+    "HttpHandlerOptions": {
+      "AllowAutoRedirect": false,
+      "UseCookieContainer": false,
+      "UseTracing": false,
+      "UseProxy": true,
+      "MaxConnectionsPerServer": 2147483647
+    },
+    "DownstreamHttpVersion": null
+  },
+  "SwaggerEndPoints": [
+    {
+      "Key": "catalogo",
+      "VersionPlaceholder": "{version}",
+      "KeyToPath": "catalogo",
+      "Config": [
+        {
+          "Name": "catalogo API",
+          "Version": "v1",
+          "Url": "http://catalogo:80/swagger/v1/swagger.json",
+          "Service": {
+            "Name": "catalogo",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        },
+        {
+          "Name": "catalogo API",
+          "Version": "v0.9",
+          "Url": "http://catalogo:80/swagger/v0.9/swagger.json",
+          "Service": {
+            "Name": "catalogo",
+            "Path": "/swagger/v0.9/swagger.json"
+          }
+        }
+      ],
+      "HostOverride": null,
+      "TransformByOcelotConfig": true
+    },
+    {
+      "Key": "produto",
+      "VersionPlaceholder": "{version}",
+      "KeyToPath": "produto",
+      "Config": [
+        {
+          "Name": "produto API",
+          "Version": "v1",
+          "Url": "http://produto:80/swagger/v1/swagger.json",
+          "Service": {
+            "Name": "produto",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ],
+      "HostOverride": null,
+      "TransformByOcelotConfig": true
+    }
+  ]
+}

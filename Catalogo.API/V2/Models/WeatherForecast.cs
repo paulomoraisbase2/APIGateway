@@ -1,6 +1,6 @@
 using System;
 
-namespace Catalogo.API
+namespace Catalogo.API.V2.Models
 {
     public class WeatherForecast
     {
