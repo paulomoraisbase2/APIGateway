@@ -1,6 +1,9 @@
 version: '3.4'
 
 services:
+  rabbitmq:
+     image: rabbitmq:3-management-alpine
+
   apigateway:
     image: ${DOCKER_REGISTRY-}apigateway
     build:
@@ -8,13 +11,15 @@ services:
       dockerfile: APIGateway/Dockerfile
 
   pedido:
-    image: pedido
+    image: ${DOCKER_REGISTRY-}pedido
     build:
       context: .
       dockerfile: Pedido.API/Dockerfile
 
   catalogo:
-    image: catalogo
+    image: ${DOCKER_REGISTRY-}catalogo
     build:
       context: .
       dockerfile: Catalogo.API/Dockerfile
+
+      

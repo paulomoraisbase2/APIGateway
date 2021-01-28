@@ -1,3 +1,28 @@
 {
-
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/catalogo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalogo",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/catalogo/",
+      "UpstreamHttpMethod": [ "Get"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/pedido",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "pedido",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/pedido/",
+      "UpstreamHttpMethod": [ "Get"]
+    }
+  ]
 }
