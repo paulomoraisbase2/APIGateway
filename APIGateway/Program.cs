@@ -4,7 +4,7 @@ using MMLib.SwaggerForOcelot.DependencyInjection;
 
 namespace APIGateway
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
