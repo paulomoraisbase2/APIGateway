@@ -6,7 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
-using System.Collections.Generic;
 
 namespace APIGateway
 {
@@ -26,8 +25,8 @@ namespace APIGateway
         {
             services.AddMvc();
             services.AddOcelot(_configuration);
+
             services.AddSwaggerForOcelot(_configuration);
-            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Getway", Version = "v1" });
@@ -42,15 +41,7 @@ namespace APIGateway
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
 
-                app.UseSwaggerForOcelotUI(opt =>
-                {
-
-                    opt.DownstreamSwaggerHeaders = new[]
-                    {
-                        new KeyValuePair<string, string>("Key", "Value"),
-                        new KeyValuePair<string, string>("Key2", "Value2"),
-                        };
-                })
+                app.UseSwaggerForOcelotUI()
                    .UseOcelot()
                    .Wait();
             }
