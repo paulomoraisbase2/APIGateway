@@ -13,7 +13,7 @@ WORKDIR /src
 COPY ["Catalogo.API/Catalogo.API.csproj", "Catalogo.API/"]
 RUN dotnet restore "Catalogo.API/Catalogo.API.csproj"
 COPY . .
-WORKDIR "/src/Catalogo.API"
+WORKDIR /src/Catalogo.API
 RUN dotnet build "Catalogo.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

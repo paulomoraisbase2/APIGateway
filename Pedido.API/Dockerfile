@@ -13,7 +13,7 @@ WORKDIR /src
 COPY ["Pedido.API/Pedido.API.csproj", "Pedido.API/"]
 RUN dotnet restore "Pedido.API/Pedido.API.csproj"
 COPY . .
-WORKDIR "/src/Pedido.API"
+WORKDIR /src/Pedido.API
 RUN dotnet build "Pedido.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
