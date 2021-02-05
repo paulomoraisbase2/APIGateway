@@ -3,11 +3,8 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Microsoft.Extensions.PlatformAbstractions;
 using SwaggerVersion;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.IO;
-using System.Reflection;
 
 namespace Catalogo.API
 {
@@ -19,6 +16,21 @@ namespace Catalogo.API
         }
 
         public IConfiguration Configuration { get; }
+
+        public void Configure(IApplicationBuilder app, IApiVersionDescriptionProvider provider)
+        {
+            app.UseRouting();
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseSwagger();
+            _ = app.UseSwaggerUI(
+                options =>
+                {
+                    foreach (ApiVersionDescription description in provider.ApiVersionDescriptions)
+                    {
+                        options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                    }
+                });
+        }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -40,22 +52,6 @@ namespace Catalogo.API
                 options =>
                 {
                     options.OperationFilter<SwaggerDefaultValues>();
-
-                });
-        }
-
-        public void Configure(IApplicationBuilder app, IApiVersionDescriptionProvider provider)
-        {
-            app.UseRouting();
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-            app.UseSwagger();
-            _ = app.UseSwaggerUI(
-                options =>
-                {
-                    foreach (ApiVersionDescription description in provider.ApiVersionDescriptions)
-                    {
-                        options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
-                    }
                 });
         }
     }

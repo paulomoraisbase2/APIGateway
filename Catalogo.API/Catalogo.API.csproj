@@ -4,7 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>..\APIGateway</DockerfileContext>
+    <CodeAnalysisRuleSet>..\.sonarlint\gatewaycsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\.sonarlint\gateway\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\APIGateway\.dockerignore" Link=".dockerignore">

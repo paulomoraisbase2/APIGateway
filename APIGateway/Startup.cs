@@ -1,11 +1,16 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace APIGateway
 {
@@ -21,18 +26,6 @@ namespace APIGateway
             _configuration = configuration;
         }
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
-            services.AddOcelot(_configuration);
-
-            services.AddSwaggerForOcelot(_configuration);
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Getway", Version = "v1" });
-            });
-        }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -46,12 +39,32 @@ namespace APIGateway
                    .Wait();
             }
             app.UseRouting();
+            app.UseHealthChecks("/health", new HealthCheckOptions { ResponseWriter = JsonResponseWriter });
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            
+        }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc();
+            services.AddHealthChecks();
+
+            services.AddOcelot(_configuration);
+
+            services.AddSwaggerForOcelot(_configuration);
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Getway", Version = "v1" });
+            });
+        }
+        private async Task JsonResponseWriter(HttpContext context, HealthReport report)
+        {
+            context.Response.ContentType = "application/json";
+            await JsonSerializer.SerializeAsync(context.Response.Body, new { Status = report.Status.ToString() },
+                new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
         }
     }
 }

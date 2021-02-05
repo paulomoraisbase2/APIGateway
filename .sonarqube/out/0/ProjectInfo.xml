@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>docker-compose</ProjectName>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>d8ef9f1a-2456-4db2-865f-54ddef458b72</ProjectGuid>
+  <FullPath>D:\Repositorios\APIGateway\docker-compose.dcproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\Repositorios\APIGateway\.sonarqube\out\0\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings />
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+</ProjectInfo>

@@ -4,7 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>7c5b1843-6e18-425c-9ac1-04cd070c88d6</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <CodeAnalysisRuleSet>..\.sonarlint\gatewaycsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\.sonarlint\gateway\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />

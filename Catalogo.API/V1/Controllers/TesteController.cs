@@ -18,13 +18,6 @@ namespace Catalogo.API.V1.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<TesteController> _logger;
-
-        public TesteController(ILogger<TesteController> logger)
-        {
-            _logger = logger;
-        }
-
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {

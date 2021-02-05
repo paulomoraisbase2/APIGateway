@@ -6,11 +6,6 @@ namespace APIGateway
 {
     public static class Program
     {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
-
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
@@ -25,5 +20,10 @@ namespace APIGateway
                     o.Folder = "OcelotConfig";
                 });
             });
+
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
     }
 }

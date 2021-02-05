@@ -1,0 +1,10 @@
+;
+2D:\Repositorios\APIGateway\Catalogo.API\Program.csutf-8;
+2D:\Repositorios\APIGateway\Catalogo.API\Startup.csutf-8R
+ID:\Repositorios\APIGateway\Catalogo.API\V1\Controllers\TesteController.csutf-8M
+DD:\Repositorios\APIGateway\Catalogo.API\V1\Models\WeatherForecast.csutf-8R
+ID:\Repositorios\APIGateway\Catalogo.API\V2\Controllers\TesteController.csutf-8M
+DD:\Repositorios\APIGateway\Catalogo.API\V2\Models\WeatherForecast.csutf-8y
+nD:\Repositorios\APIGateway\Catalogo.API\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8g
+\D:\Repositorios\APIGateway\Catalogo.API\obj\Debug\netcoreapp3.1\Catalogo.API.AssemblyInfo.csutf-8z
+oD:\Repositorios\APIGateway\Catalogo.API\obj\Debug\netcoreapp3.1\Catalogo.API.MvcApplicationPartsAssemblyInfo.csutf-8
